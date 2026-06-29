@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+
+:root {
+  /* Color Palette */
+  --color-primary: #c9c6c5;
+  --color-secondary: #e9c349;
+  --color-background: #0D0D0D;
+  --color-surface: #141313;
+  --color-surface-dim: #141313;
+  --color-surface-bright: #3a3939;
+  --color-surface-container: #201f1f;
+  --color-surface-container-low: #1c1b1b;
+  --color-surface-container-lowest: #0e0e0e;
+  --color-surface-container-high: #2b2a2a;
+  --color-surface-container-highest: #353434;
+  --color-on-surface: #e5e2e1;
+  --color-on-surface-variant: #c4c7c7;
+  --color-on-secondary: #3c2f00;
+  --color-outline: #8e9192;
+  --color-outline-variant: #444748;
+
+  /* Bootstrap Override Bindings */
+  --bs-body-bg: var(--color-background);
+  --bs-body-color: var(--color-on-surface);
+  --bs-primary: var(--color-primary);
+  --bs-primary-rgb: 201, 198, 197;
+  --bs-secondary: var(--color-secondary);
+  --bs-secondary-rgb: 233, 195, 73;
+
+  /* Spacing System */
+  --gutter: 32px;
+  --stack-lg: 24px;
+  --stack-md: 16px;
+  --stack-sm: 8px;
+  --section-gap: 120px;
+  --margin-mobile: 20px;
+  --container-max: 1280px;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-on-surface);
+  overflow-x: hidden;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Typography styles matching the original design */
+.font-headline-md {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+.font-body-lg {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+.font-display-lg {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+.font-headline-lg {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.font-body-md {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.font-label-caps {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 767.98px) {
+  .font-display-lg {
+    font-size: 40px;
+  }
+  .font-headline-lg {
+    font-size: 32px;
+  }
+  .font-headline-md {
+    font-size: 24px;
+  }
+}
+
+/* Custom background/text utility mappings */
+.bg-background { background-color: var(--color-background) !important; }
+.bg-surface { background-color: var(--color-surface) !important; }
+.bg-surface-container { background-color: var(--color-surface-container) !important; }
+.bg-surface-container-low { background-color: var(--color-surface-container-low) !important; }
+.bg-surface-container-lowest { background-color: var(--color-surface-container-lowest) !important; }
+.bg-surface-container-high { background-color: var(--color-surface-container-high) !important; }
+.bg-surface-container-highest { background-color: var(--color-surface-container-highest) !important; }
+.bg-surface-dim { background-color: var(--color-surface-dim) !important; }
+.bg-surface-bright { background-color: var(--color-surface-bright) !important; }
+.bg-secondary { background-color: var(--color-secondary) !important; }
+.bg-youtube { background-color: #FF0000 !important; }
+.bg-whatsapp { background-color: #25D366 !important; }
+.bg-input-dark { background-color: #1A1A1A !important; }
+.bg-surface-container-low-50 { background-color: rgba(28, 27, 27, 0.5) !important; }
+
+.text-secondary { color: var(--color-secondary) !important; }
+.text-on-secondary { color: var(--color-on-secondary) !important; }
+.text-on-surface { color: var(--color-on-surface) !important; }
+.text-on-surface-variant { color: var(--color-on-surface-variant) !important; }
+
+/* Custom spacings */
+.max-w-container-max {
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+}
+.px-gutter {
+  padding-left: var(--gutter) !important;
+  padding-right: var(--gutter) !important;
+}
+.py-section-gap {
+  padding-top: var(--section-gap) !important;
+  padding-bottom: var(--section-gap) !important;
+}
+.mb-stack-lg {
+  margin-bottom: var(--stack-lg) !important;
+}
+.mb-stack-md {
+  margin-bottom: var(--stack-md) !important;
+}
+.gap-stack-lg {
+  gap: var(--stack-lg) !important;
+}
+.gap-stack-md {
+  gap: var(--stack-md) !important;
+}
+.gap-stack-sm {
+  gap: var(--stack-sm) !important;
+}
+
+/* Custom borders & blurring */
+.border-secondary-20 {
+  border-color: rgba(233, 195, 73, 0.2) !important;
+}
+.border-secondary-30 {
+  border-color: rgba(233, 195, 73, 0.3) !important;
+}
+.border-white-5 {
+  border-color: rgba(255, 255, 255, 0.05) !important;
+}
+.border-white-10 {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+.bg-navbar-blur {
+  background-color: rgba(13, 13, 13, 0.8) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+.border-navbar {
+  border-bottom: 1px solid rgba(233, 195, 73, 0.2) !important;
+}
+
+/* Sizing utilities */
+.h-20 { height: 5rem !important; }
+.w-16 { width: 4rem !important; }
+.h-16 { height: 4rem !important; }
+.w-12 { width: 3rem !important; }
+.h-12 { height: 3rem !important; }
+.w-48 { width: 12rem !important; }
+.h-48 { height: 12rem !important; }
+.w-32 { width: 8rem !important; }
+
+/* Custom effects */
+.glass-card {
+  background: rgba(25, 25, 25, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(233, 195, 73, 0.2);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-card:hover {
+  border-color: rgba(233, 195, 73, 0.8);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 15px rgba(233, 195, 73, 0.1);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(to right, #e9c349, #ffe088, #e9c349);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+.scroll-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.glow-particle {
+  position: absolute;
+  background: #e9c349;
+  filter: blur(4px);
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+/* Bootstrap adjustments for custom branding integration */
+.navbar-nav .nav-link {
+  transition: color 0.3s ease;
+}
+.navbar-nav .nav-link:hover {
+  color: var(--color-secondary) !important;
+}
+.btn-secondary {
+  background-color: var(--color-secondary) !important;
+  color: var(--color-on-secondary) !important;
+  border: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.btn-secondary:hover {
+  opacity: 0.85;
+}
+.btn-outline-secondary {
+  border-color: var(--color-secondary) !important;
+  color: var(--color-secondary) !important;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+.btn-outline-secondary:hover {
+  background-color: rgba(233, 195, 73, 0.1) !important;
+  color: var(--color-secondary) !important;
+}
+
+/* Card & Image hover scaling and color changes */
+.group {
+  text-decoration: none;
+  display: block;
+}
+.group-hover-scale {
+  transition: transform 0.7s ease;
+}
+.group:hover .group-hover-scale {
+  transform: scale(1.05);
+}
+.group-hover-color {
+  transition: color 0.3s ease;
+}
+.group:hover .group-hover-color {
+  color: var(--color-secondary) !important;
+}
+
+.hover-text-secondary {
+  transition: color 0.3s ease;
+}
+.hover-text-secondary:hover {
+  color: var(--color-secondary) !important;
+}
+
+.hover-secondary-btn {
+  transition: all 0.3s ease;
+}
+.hover-secondary-btn:hover {
+  background-color: var(--color-secondary) !important;
+  color: var(--color-on-secondary) !important;
+}
+
+.group-hover-opacity {
+  transition: opacity 0.3s ease;
+}
+.group:hover .group-hover-opacity {
+  opacity: 1 !important;
+}
+
+.hover-scale-110 {
+  transition: transform 0.3s ease;
+}
+.hover-scale-110:hover {
+  transform: scale(1.1) !important;
+}

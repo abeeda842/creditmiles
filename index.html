@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Credit Miles | Unlock Premium Rewards</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom CSS Stylesheet -->
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body class="font-body-md text-on-surface">
+
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-navbar-blur border-navbar shadow-lg py-0">
+        <div class="container-fluid max-w-container-max px-gutter h-20 d-flex justify-content-between align-items-center">
+            <a class="navbar-brand d-flex align-items-center gap-2 p-0" href="#">
+                <span class="font-headline-md text-secondary tracking-tight">Credit Miles</span>
+            </a>
+            
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <div class="navbar-nav gap-4">
+                    <a class="nav-link font-label-caps text-secondary pb-1" href="index.html" style="border-bottom: 1px solid var(--color-secondary);">Home</a>
+                    <a class="nav-link font-label-caps text-on-surface-variant" href="updates.html">Updates</a>
+                    <a class="nav-link font-label-caps text-on-surface-variant" href="index.html#reviews">Reviews</a>
+                    <a class="nav-link font-label-caps text-on-surface-variant" href="index.html#about-me">About Me</a>
+                </div>
+            </div>
+            
+            <div class="d-flex align-items-center gap-3">
+                <button class="btn btn-secondary px-4 py-2 font-label-caps text-on-secondary rounded-lg">
+                    Consultation
+                </button>
+                <button class="navbar-toggler border-secondary-20 p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="position-relative min-vh-100 d-flex align-items-center pt-5 overflow-hidden">
+        <!-- Background Canvas Shader -->
+        <div class="position-absolute top-0 start-0 w-100 h-100 opacity-60">
+            <canvas id="shader-canvas-ANIMATION_2" style="display:block; width:100%; height:100%"></canvas>
+        </div>
+        
+        <div class="container-fluid max-w-container-max px-gutter position-relative z-1 mt-5">
+            <div class="row align-items-center g-5">
+                <div class="col-12 col-md-5 d-flex flex-column gap-stack-lg">
+                    <h1 class="font-display-lg text-white m-0">
+                        Credit Cards, Rewards, Miles <br /><span class="gold-gradient-text">Simplified</span> Forever
+                    </h1>
+                    <p class="font-body-lg text-on-surface-variant max-w-xl m-0">
+                        Discover the best credit cards, earn more miles, and maximize your rewards. Experience travel like
+                        never before with elite tier strategies.
+                    </p>
+                    <div class="d-flex flex-wrap gap-stack-md pt-4">
+                        <a href="cards.html" class="btn btn-secondary px-5 py-3 font-label-caps text-on-secondary rounded-lg font-bold shadow-lg text-decoration-none d-inline-block" style="box-shadow: 0 10px 30px rgba(233,195,73,0.3) !important;">
+                            Explore Cards
+                        </a>
+                        <a href="updates.html" class="btn btn-outline-secondary px-5 py-3 font-label-caps rounded-lg font-bold text-decoration-none d-inline-block">
+                            Latest Updates
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-12 col-md-7 d-none d-md-block position-relative" style="height: 500px; perspective: 1000px;">
+                    <!-- Card Image Container -->
+                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
+                        <img src="assets/Images/card.png" 
+                             class="shadow-lg" 
+                             style="width: 100%; aspect-ratio: 1.58 / 1; transform: rotateZ(-10deg); transition: transform 0.1s ease; transform-style: preserve-3d; cursor: pointer;" 
+                             id="hero-card-image-container" 
+                             alt="Premium Credit Card" />
+                    </div>
+                    <div class="glow-particle position-absolute" style="top: 25%; right: 25%; width: 8px; height: 8px;"></div>
+                    <div class="glow-particle position-absolute opacity-20" style="bottom: 33%; left: 33%; width: 12px; height: 12px;"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Featured Cards Section -->
+    <section class="py-section-gap position-relative">
+        <div class="container-fluid max-w-container-max px-gutter">
+            <div class="d-flex justify-content-between align-items-end mb-stack-lg border-start border-4 border-secondary ps-4">
+                <div>
+                    <h2 class="font-headline-lg text-white m-0">Featured Cards</h2>
+                    <p class="font-body-md text-on-surface-variant m-0 mt-2">Top-tier selection for the discerning traveler.</p>
+                </div>
+                <a class="text-secondary font-label-caps border-bottom border-secondary-20 hover:border-secondary transition-all pb-1 text-decoration-none" href="#">View All</a>
+            </div>
+            
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mt-5">
+                <!-- Card 1: HDFC Bank -->
+                <div class="col">
+                    <div class="glass-card rounded-xl p-4 d-flex flex-column h-100">
+                        <div class="position-relative w-100 mb-4 rounded-3 overflow-hidden border border-white-10 d-flex align-items-center justify-content-center" style="aspect-ratio: 1.58 / 1; background: linear-gradient(135deg, rgba(0, 51, 102, 0.2) 0%, rgba(255, 255, 255, 0.02) 100%);">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-16 h-16 transition-transform duration-300 group-hover:scale-110">
+                                <rect width="100" height="100" rx="12" fill="#003366"/>
+                                <rect x="42" y="15" width="16" height="70" fill="#FFFFFF"/>
+                                <rect x="15" y="42" width="70" height="16" fill="#FFFFFF"/>
+                                <rect x="35" y="35" width="30" height="30" fill="#003366"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-headline-md text-white mb-2 fs-4">HDFC Bank</h3>
+                        <div class="space-y-2 mb-4 flex-grow-1">
+                            <div class="d-flex justify-content-between font-label-caps text-on-surface-variant mb-1">
+                                <span>Featured Cards</span>
+                            </div>
+                            <p class="text-secondary font-body-md m-0 font-semibold">Infinia, Diners Club Black, Regalia Gold</p>
+                            <p class="font-body-md text-on-surface-variant pt-3 fst-italic">"India's leading private bank, offering the gold-standard rewards ecosystem with SmartBuy multipliers."</p>
+                        </div>
+                        <button class="btn btn-outline-secondary w-100 py-2 rounded-lg font-label-caps">Explore Cards</button>
+                    </div>
+                </div>
+                
+                <!-- Card 2: ICICI Bank -->
+                <div class="col">
+                    <div class="glass-card rounded-xl p-4 d-flex flex-column h-100">
+                        <div class="position-relative w-100 mb-4 rounded-3 overflow-hidden border border-white-10 d-flex align-items-center justify-content-center" style="aspect-ratio: 1.58 / 1; background: linear-gradient(135deg, rgba(243, 112, 33, 0.2) 0%, rgba(255, 255, 255, 0.02) 100%);">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-16 h-16 transition-transform duration-300 group-hover:scale-110">
+                                <rect width="100" height="100" rx="12" fill="#F37021"/>
+                                <path d="M50 22 C34 22 22 34 22 50 C22 66 34 78 50 78 C66 78 78 66 78 50" fill="none" stroke="#FFD700" stroke-width="8" stroke-linecap="round"/>
+                                <circle cx="50" cy="50" r="10" fill="#ffffff"/>
+                                <path d="M50 35 L50 65" stroke="#ffffff" stroke-width="8" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-headline-md text-white mb-2 fs-4">ICICI Bank</h3>
+                        <div class="space-y-2 mb-4 flex-grow-1">
+                            <div class="d-flex justify-content-between font-label-caps text-on-surface-variant mb-1">
+                                <span>Featured Cards</span>
+                            </div>
+                            <p class="text-secondary font-body-md m-0 font-semibold">Emeralde Private, Sapphiro, Coral</p>
+                            <p class="font-body-md text-on-surface-variant pt-3 fst-italic">"Renowned for custom lifestyle experiences, movie partnerships, and premium metal cards."</p>
+                        </div>
+                        <button class="btn btn-outline-secondary w-100 py-2 rounded-lg font-label-caps">Explore Cards</button>
+                    </div>
+                </div>
+
+                <!-- Card 3: HSBC Bank -->
+                <div class="col">
+                    <div class="glass-card rounded-xl p-4 d-flex flex-column h-100">
+                        <div class="position-relative w-100 mb-4 rounded-3 overflow-hidden border border-white-10 d-flex align-items-center justify-content-center" style="aspect-ratio: 1.58 / 1; background: linear-gradient(135deg, rgba(219, 0, 17, 0.2) 0%, rgba(255, 255, 255, 0.02) 100%);">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-16 h-16 transition-transform duration-300 group-hover:scale-110">
+                                <rect width="100" height="100" rx="12" fill="#121212" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                                <polygon points="50,18 82,36 82,64 50,82 18,64 18,36" fill="#db0011"/>
+                                <polygon points="50,50 18,36 82,36" fill="#ffffff"/>
+                                <polygon points="50,50 18,64 82,64" fill="#ffffff"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-headline-md text-white mb-2 fs-4">HSBC Bank</h3>
+                        <div class="space-y-2 mb-4 flex-grow-1">
+                            <div class="d-flex justify-content-between font-label-caps text-on-surface-variant mb-1">
+                                <span>Featured Cards</span>
+                            </div>
+                            <p class="text-secondary font-body-md m-0 font-semibold">Premier, Live+ Cashback, Platinum</p>
+                            <p class="font-body-md text-on-surface-variant pt-3 fst-italic">"Providing premium global banking privileges, dining cashback programs, and elite lounge club access."</p>
+                        </div>
+                        <button class="btn btn-outline-secondary w-100 py-2 rounded-lg font-label-caps">Explore Cards</button>
+                    </div>
+                </div>
+
+                <!-- Card 4: Axis Bank -->
+                <div class="col">
+                    <div class="glass-card rounded-xl p-4 d-flex flex-column h-100">
+                        <div class="position-relative w-100 mb-4 rounded-3 overflow-hidden border border-white-10 d-flex align-items-center justify-content-center" style="aspect-ratio: 1.58 / 1; background: linear-gradient(135deg, rgba(128, 0, 32, 0.2) 0%, rgba(255, 255, 255, 0.02) 100%);">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-16 h-16 transition-transform duration-300 group-hover:scale-110">
+                                <rect width="100" height="100" rx="12" fill="#800020"/>
+                                <path d="M22 75 L50 25 L78 75 H62 L50 48 L38 75 Z" fill="#ffffff" />
+                            </svg>
+                        </div>
+                        <h3 class="font-headline-md text-white mb-2 fs-4">Axis Bank</h3>
+                        <div class="space-y-2 mb-4 flex-grow-1">
+                            <div class="d-flex justify-content-between font-label-caps text-on-surface-variant mb-1">
+                                <span>Featured Cards</span>
+                            </div>
+                            <p class="text-secondary font-body-md m-0 font-semibold">Magnus, Reserve, Atlas, Horizon</p>
+                            <p class="font-body-md text-on-surface-variant pt-3 fst-italic">"The premier bank for transfer partners, enabling strategic airmile conversions and luxury hotel stays."</p>
+                        </div>
+                        <button class="btn btn-outline-secondary w-100 py-2 rounded-lg font-label-caps">Explore Cards</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="py-section-gap">
+        <div class="container-fluid max-w-container-max px-gutter">
+            <h2 class="font-headline-lg text-white mb-5 scroll-reveal">Latest News</h2>
+            
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                <!-- 
+                [Article 1]
+                <div class="col">
+                    <article class="group cursor-pointer scroll-reveal h-100">
+                        <div class="overflow-hidden rounded-xl mb-4 border border-white-5" style="aspect-ratio: 16 / 9;">
+                            <img class="w-100 h-100 object-fit-cover group-hover-scale"
+                                data-alt="A cinematic first-person view from a luxury business class seat, looking out of the window at a sunrise over the clouds. The cabin interior is elegantly designed with high-quality materials and warm, golden lighting. The composition conveys a sense of freedom, luxury travel, and the rewards of smart miles management."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuBeXzxMlRiCpF3fLeLziOAp5TjOCwEfsnztLoMdd43_bQ5eLnDDyTGU7ydaMVg4Wx4RJ6bvVp8YPcqnH9in0yjPlTfLufZ_hOjhdMBPJEpYz6u_jLitnazOpawJ9Zjrl7PNWqt6mu7gtKMLPtKdQI0aDsGkuplJfSAZHMaVcMoE0hVzR0HubAguqXsrl9WhSXCs-AVlEwhiidOHEvXXO2a7pc8Z598ggPN4qztqdJA5hja-PRz82DSMgFhR3q9GRhb2hyCGpC9Cs" />
+                        </div>
+                        <span class="font-label-caps text-secondary mb-2 d-block">Travel Hacks</span>
+                        <h3 class="font-headline-md fs-5 text-white group-hover-color">How to Earn Free Flights Using Daily Spending</h3>
+                    </article>
+                </div>
+                
+                [Article 2]
+                <div class="col">
+                    <article class="group cursor-pointer scroll-reveal h-100" style="transition-delay: 100ms;">
+                        <div class="overflow-hidden rounded-xl mb-4 border border-white-5" style="aspect-ratio: 16 / 9;">
+                            <img class="w-100 h-100 object-fit-cover group-hover-scale"
+                                data-alt="An artistic arrangement of premium credit cards spread out on a dark, reflective surface in a modern office in Riyadh. The background features a subtle Riyadh skyline silhouette at dusk. The lighting is sophisticated, with amber and gold tones that match a high-end financial aesthetic. The image represents the top tier of financial products in Saudi Arabia."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBy8ecJqlVh7e3rDbgXOKwlf-MzanuAgBCNrFlNa5ICfQmxMGAw9EYjvwZhOcfQDggkcFLsfq1Y0sdzEgNMZLVn9QLvug0UQr6agHF4vPGy4gsusPxS7Ifii5bnzxnMYu8VtW4_NZzM8XVCGp5yXLLdgcSCNDqbZwikF6diuahNwgjWRCdyRY8GpLnsVTaeQjUuMk5vEm6Cp_9XZgtsDeyUPHslXjBTHoxoWPyJguPRChpnjN8xrUtRVcXn915VAuEnZ39yoRu19g8" />
+                        </div>
+                        <span class="font-label-caps text-secondary mb-2 d-block">Local Insights</span>
+                        <h3 class="font-headline-md fs-5 text-white group-hover-color">Top 10 Credit Cards in Saudi Arabia for 2024</h3>
+                    </article>
+                </div>
+                
+                [Article 3]
+                <div class="col">
+                    <article class="group cursor-pointer scroll-reveal h-100" style="transition-delay: 200ms;">
+                        <div class="overflow-hidden rounded-xl mb-4 border border-white-5" style="aspect-ratio: 16 / 9;">
+                            <img class="w-100 h-100 object-fit-cover group-hover-scale"
+                                data-alt="A conceptual image of a golden key and a premium black card on a velvet cushion. The lighting is dramatic, with a single spotlight highlighting the metallic textures. The scene evokes a sense of privilege, luxury, and the value of membership. The background is a dark, frosted glass texture that fits the overall design theme."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUU24AIpL_yI_GZhQLmZm3gKI_ZcyoCBWFem4OkdAdFG0_i0n0zl88QKHwtUQ_BnCsuyucutdY3vA5SO00WWAdL6awUWPlRrr7wbDGdWMZvKqOFTe_EFHajWYMSfn6PLlaFGDjbGkKnn6QzyyP4o7RF3pvj7hquA5u8cwNW4DAg_qnC1yMja3IFzIR-Cn9MuDFFEo-pJU1-ZFoBPnmCPdzy5u7QbbC5AeE_Cx4t7DlOqSIswLkZ-ny4yCGaMOtTDiU97miLB0ohAM" />
+                        </div>
+                        <span class="font-label-caps text-secondary mb-2 d-block">Opinion</span>
+                        <h3 class="font-headline-md fs-5 text-white group-hover-color">Is a Premium Credit Card Truly Worth the Annual Fee?</h3>
+                    </article>
+                </div>
+                
+                [Article 4]
+                <div class="col">
+                    <article class="group cursor-pointer scroll-reveal h-100" style="transition-delay: 300ms;">
+                        <div class="overflow-hidden rounded-xl mb-4 border border-white-5" style="aspect-ratio: 16 / 9;">
+                            <img class="w-100 h-100 object-fit-cover group-hover-scale"
+                                data-alt="A stylized image representing high-speed cashback returns, with golden coins transforming into digital data streams over a dark, minimalist background. The aesthetic is clean and high-tech, focusing on efficiency and financial growth. Subtle gold gradients and razor-sharp lines define the composition."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_47I4KrtyUsbnSOe7ZJsvTD_KSNH5ID3zbeSeuq2uR6XwBVMrNjtSvWU5Tf5Mg8aRxzUScqwEzoLmCS2VSsMpHEq5xIC4CCwu_W-MXAhf8djcGF5Gglksx9_2Xim0OhTvcZorjUNTZIvy98ZHEq0hbgcTg79knngcNsbGsIm8TKDhJlYt8OoBQHlI4amZgcWM6lCampUBd9Ul0Ds6IYNnVebt5wcsnQHNVYRveEXr9N9Uqry52btMPEEuR_neKf2lDbAv_h_mRbw" />
+                        </div>
+                        <span class="font-label-caps text-secondary mb-2 d-block">Rewards</span>
+                        <h3 class="font-headline-md fs-5 text-white group-hover-color">Best Cashback Cards for Maximum Savings</h3>
+                    </article>
+                </div>
+                -->
+            </div>
+        </div>
+    </section>
+
+    <!-- YouTube Section -->
+    <section class="py-section-gap bg-surface-container-lowest">
+        <div class="container-fluid max-w-container-max px-gutter">
+            <div class="row g-5">
+                <div class="col-12 col-lg-8">
+                    <div class="border-start border-4 border-secondary ps-4 mb-5">
+                        <h2 class="font-headline-lg text-white m-0">Featured Video</h2>
+                        <p class="font-body-md text-on-surface-variant m-0 mt-2">In-depth credit card strategies, reward breakdowns, and video reviews.</p>
+                    </div>
+                    
+                    <a href="https://youtu.be/OXUqZtsifu8?si=EgpvD1gKiXVWF5_v" target="_blank" class="d-block position-relative w-100 rounded-4 overflow-hidden border border-secondary-20 shadow-lg text-decoration-none" style="aspect-ratio: 16 / 9;">
+                        <img class="w-100 h-100 object-fit-cover"
+                            alt="These Fuel Cards Can Save You ₹10,000+ Every Year!"
+                            src="https://img.youtube.com/vi/OXUqZtsifu8/maxresdefault.jpg" />
+                        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center cursor-pointer group" style="background-color: rgba(0, 0, 0, 0.4) !important;">
+                            <div class="d-flex align-items-center justify-content-center rounded-circle group-hover-scale" style="width: 80px; height: 80px; background-color: var(--color-secondary); transition: transform 0.3s ease;">
+                                <span class="material-symbols-outlined text-on-secondary text-5xl" style="font-size: 48px;">play_arrow</span>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="mt-4">
+                        <a href="https://youtu.be/OXUqZtsifu8?si=EgpvD1gKiXVWF5_v" target="_blank" class="text-decoration-none">
+                            <h3 class="font-headline-md text-white hover-text-secondary transition-colors">These Fuel Cards Can Save You ₹10,000+ Every Year!</h3>
+                        </a>
+                        <p class="text-on-surface-variant mt-2 font-body-md">Watch as I break down the best fuel credit cards in India. We analyze surcharge waivers, cashback rates, annual fees, and how to maximize your savings at the pump.</p>
+                    </div>
+                </div>
+                
+                <div class="col-12 col-lg-4">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h4 class="font-headline-md text-white m-0" style="font-size: 20px;">Latest Videos</h4>
+                        <a href="https://www.youtube.com/@creditsimplified" target="_blank" class="btn btn-danger bg-youtube border-0 px-3 py-2 rounded-lg font-label-caps d-flex align-items-center gap-2 text-decoration-none">
+                            <span class="material-symbols-outlined fs-6">smart_display</span> Subscribe
+                        </a>
+                    </div>
+                    
+                    <div class="d-flex flex-column gap-3">
+                        <!-- Active Video 1 -->
+                        <a href="https://youtu.be/DgOmeRD1QLQ?si=DX_T60KMpfqIebjP" target="_blank" class="d-flex gap-3 group cursor-pointer text-decoration-none">
+                            <div class="rounded border border-white-10 overflow-hidden flex-shrink-0" style="width: 120px; aspect-ratio: 16 / 9;">
+                                <img class="w-100 h-100 object-fit-cover"
+                                    alt="HDFC Regalia Gold Devaluation Video Thumbnail"
+                                    src="https://img.youtube.com/vi/DgOmeRD1QLQ/hqdefault.jpg" />
+                            </div>
+                            <div>
+                                <h5 class="text-white font-medium text-sm leading-tight group-hover-color m-0">HDFC Regalia Gold Devaluation 🔥 Rewards Reduced?</h5>
+                                <p class="text-xs text-on-surface-variant mt-2 m-0">2.8k views • 5 days ago</p>
+                            </div>
+                        </a>
+
+                        <!-- Active Video 2 -->
+                        <a href="https://youtu.be/VRBXNkQxqF0?si=-PvUpod-FyQyO6-J" target="_blank" class="d-flex gap-3 group cursor-pointer text-decoration-none">
+                            <div class="rounded border border-white-10 overflow-hidden flex-shrink-0" style="width: 120px; aspect-ratio: 16 / 9;">
+                                <img class="w-100 h-100 object-fit-cover"
+                                    alt="Paytm Bank Cancelled Video Thumbnail"
+                                    src="https://img.youtube.com/vi/VRBXNkQxqF0/hqdefault.jpg" />
+                            </div>
+                            <div>
+                                <h5 class="text-white font-medium text-sm leading-tight group-hover-color m-0">PAYTM BANK CANCELLED 😳 What To Do NOW? | Don’t Panic!</h5>
+                                <p class="text-xs text-on-surface-variant mt-2 m-0">4.5k views • 1 week ago</p>
+                            </div>
+                        </a>
+
+                        <!-- Active Video 3 -->
+                        <a href="https://youtu.be/VLTOd6omB2w?si=cM1XlNMb2e-K8Mvb" target="_blank" class="d-flex gap-3 group cursor-pointer text-decoration-none">
+                            <div class="rounded border border-white-10 overflow-hidden flex-shrink-0" style="width: 120px; aspect-ratio: 16 / 9;">
+                                <img class="w-100 h-100 object-fit-cover"
+                                    alt="Credit Cards Explained for Beginners Video Thumbnail"
+                                    src="https://img.youtube.com/vi/VLTOd6omB2w/hqdefault.jpg" />
+                            </div>
+                            <div>
+                                <h5 class="text-white font-medium text-sm leading-tight group-hover-color m-0">Credit Cards Explained for Beginners 💳 | Basic Terms You Must Know | Part 2</h5>
+                                <p class="text-xs text-on-surface-variant mt-2 m-0">6.1k views • 3 weeks ago</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="py-section-gap position-relative overflow-hidden">
+        <div class="glow-particle position-absolute opacity-5" style="width: 256px; height: 256px; top: -128px; left: -128px; filter: blur(120px);"></div>
+        <div class="container-fluid max-w-container-max px-gutter text-center position-relative z-1">
+            <div class="w-48 h-48 mx-auto rounded-circle p-1 mb-5" style="background: linear-gradient(135deg, var(--color-secondary), transparent);">
+                <div class="w-100 h-100 rounded-circle overflow-hidden border border-4 border-background">
+                    <img class="w-100 h-100 object-fit-cover"
+                        data-alt="A professional portrait of Abeed Azad, a financial expert and credit card strategist. He is dressed in a sharp, modern charcoal suit, looking confident and approachable. The background is a blurred, high-end contemporary office space with warm, directional lighting that creates a professional and trustworthy vibe. The aesthetic is clean and premium."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSHCl5Vegn8UYbURhBvGfQfV8mpt3G4x3r82yY0HUUsaPhSi-BK4ZnnR_YOVJAuMNd0EYxqPLQQeXD13v2x8YLkhQzFqz_dOJ1X_Mr8E-fOauauQ8NQumOKugYTC0sosCIcvyg5SGGd7NczIAS8fN9wMye-JpvjWW2IOd3j8Q3rj1OBm2aTFw2iL3YS2f4-q-GYAl3hhFpO0sssKuics52qmyvU-ERxntIV7LS2Lcx7HQOiGSiGRk3e7bEFqcGAtfSardAmjqjxiA" />
+                </div>
+            </div>
+            <h2 class="font-headline-lg text-white">Abeed Azad</h2>
+            <p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto mt-4">
+                I've spent years mastering the art of credit card rewards and travel loyalty programs. My mission is to
+                help you unlock a world of luxury travel and financial benefits through smart card management and
+                strategic spending.
+            </p>
+            <div class="d-flex justify-content-center gap-3 mt-5">
+                <a class="w-12 h-12 rounded-circle border border-secondary-30 d-flex align-items-center justify-content-center text-secondary hover-secondary-btn transition-all text-decoration-none" href="#">
+                    <span class="material-symbols-outlined">smart_display</span>
+                </a>
+                <a class="w-12 h-12 rounded-circle border border-secondary-30 d-flex align-items-center justify-content-center text-secondary hover-secondary-btn transition-all text-decoration-none" href="#">
+                    <span class="material-symbols-outlined">camera</span>
+                </a>
+                <a class="w-12 h-12 rounded-circle border border-secondary-30 d-flex align-items-center justify-content-center text-secondary hover-secondary-btn transition-all text-decoration-none" href="#">
+                    <span class="material-symbols-outlined">work</span>
+                </a>
+                <a class="w-12 h-12 rounded-circle border border-secondary-30 d-flex align-items-center justify-content-center text-secondary hover-secondary-btn transition-all text-decoration-none" href="#">
+                    <span class="material-symbols-outlined">alternate_email</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="w-full py-section-gap border-top border-secondary-30 bg-surface-container-lowest">
+        <div class="container-fluid max-w-container-max px-gutter">
+            <div class="row g-5">
+                <div class="col-12 col-md-3">
+                    <span class="font-headline-md text-secondary">Credit Miles</span>
+                    <p class="text-on-surface-variant mt-4 font-body-md">Your gateway to the world of premium travel and
+                        elite financial rewards.</p>
+                </div>
+                <div class="col-12 col-md-3">
+                    <h4 class="font-label-caps text-white mb-4">Quick Links</h4>
+                    <ul class="list-unstyled d-flex flex-column gap-2 m-0 p-0">
+                        <li><a class="text-on-surface-variant hover-text-secondary text-decoration-none font-body-md" href="#">Latest Reviews</a></li>
+                        <li><a class="text-on-surface-variant hover-text-secondary text-decoration-none font-body-md" href="#">Card Comparison</a></li>
+                        <li><a class="text-on-surface-variant hover-text-secondary text-decoration-none font-body-md" href="#">Travel Guides</a></li>
+                        <li><a class="text-on-surface-variant hover-text-secondary text-decoration-none font-body-md" href="#">Consultation</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-3">
+                    <h4 class="font-label-caps text-white mb-4">Contact</h4>
+                    <ul class="list-unstyled d-flex flex-column gap-2 m-0 p-0">
+                        <li class="text-on-surface-variant font-body-md">
+                            <a href="mailto:abeed@gmail.com" class="text-on-surface-variant hover-text-secondary text-decoration-none">abeed@gmail.com</a>
+                        </li>
+                        <li class="text-on-surface-variant font-body-md">
+                            <a href="tel:+918893374583" class="text-on-surface-variant hover-text-secondary text-decoration-none">+91 88933 74583</a>
+                        </li>
+                        <li class="text-on-surface-variant font-body-md">Kerala, India</li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-3">
+                    <h4 class="font-label-caps text-white mb-4">Newsletter</h4>
+                    <div class="d-flex gap-2">
+                        <input class="form-control bg-input-dark border border-secondary-30 px-3 py-2 text-white text-sm" placeholder="Email address" type="email" style="border-radius: 8px;" />
+                        <button class="btn btn-secondary px-3 py-2 font-label-caps font-bold" style="font-size: 10px; border-radius: 8px;">Join</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-5 pt-4 border-top border-white-5 text-center">
+                <p class="text-on-surface-variant font-body-md text-sm opacity-60 m-0">© 2024 Credit Miles by Abeed Azad. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="position-fixed bottom-0 end-0 p-4 z-3 d-flex align-items-center group">
+        <div class="bg-secondary text-on-secondary px-3 py-2 rounded-lg font-label-caps me-3 opacity-0 group-hover-opacity transition-opacity whitespace-nowrap shadow border border-white-20">
+            Chat with us on WhatsApp
+        </div>
+        <a href="https://wa.me/918893374583" target="_blank" class="w-16 h-16 bg-whatsapp border-0 rounded-circle d-flex align-items-center justify-content-center text-white shadow hover-scale-110 transition-transform text-decoration-none" style="box-shadow: 0 0 20px rgba(37,211,102,0.4) !important;">
+            <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24" style="width: 32px; height: 32px;">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
+            </svg>
+        </a>
+    </div>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>

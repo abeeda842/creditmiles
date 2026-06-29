@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Explore Credit Cards | Credit Miles</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom CSS Stylesheet -->
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body class="font-body-md text-on-surface">
+
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-navbar-blur border-navbar shadow-lg py-0">
+        <div class="container-fluid max-w-container-max px-gutter h-20 d-flex justify-content-between align-items-center">
+            <a class="navbar-brand d-flex align-items-center gap-2 p-0" href="index.html">
+                <span class="font-headline-md text-secondary tracking-tight">Credit Miles</span>
+            </a>
+            
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <div class="navbar-nav gap-4">
+                    <a class="nav-link font-label-caps text-on-surface-variant" href="index.html">Home</a>
+                    <a class="nav-link font-label-caps text-secondary pb-1" href="cards.html" style="border-bottom: 1px solid var(--color-secondary);">Explore Cards</a>
+                    <a class="nav-link font-label-caps text-on-surface-variant" href="updates.html">Updates</a>
+                    <a class="nav-link font-label-caps text-on-surface-variant" href="index.html#reviews">Reviews</a>
+                    <a class="nav-link font-label-caps text-on-surface-variant" href="index.html#about-me">About Me</a>
+                </div>
+            </div>
+            
+            <div class="d-flex align-items-center gap-3">
+                <button class="btn btn-secondary px-4 py-2 font-label-caps text-on-secondary rounded-lg">
+                    Consultation
+                </button>
+                <button class="navbar-toggler border-secondary-20 p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Compact Hero Header Section -->
+    <header class="position-relative d-flex align-items-center pt-5 overflow-hidden" style="min-height: 40vh;">
+        <!-- Background Canvas Shader -->
+        <div class="position-absolute top-0 start-0 w-100 h-100 opacity-60">
+            <canvas id="shader-canvas-ANIMATION_2" style="display:block; width:100%; height:100%"></canvas>
+        </div>
+        
+        <div class="container-fluid max-w-container-max px-gutter position-relative z-1 mt-5 text-center">
+            <h1 class="font-display-lg text-white m-0">
+                Explore <span class="gold-gradient-text">Premium</span> Credit Cards
+            </h1>
+            <p class="font-body-lg text-on-surface-variant max-w-xl mx-auto mt-3 mb-0">
+                Compare and select from India's finest credit cards tailored for luxury travel, dining privileges, and premier reward points.
+            </p>
+        </div>
+    </header>
+
+    <!-- Cards Directory Grid Section -->
+    <section class="py-section-gap relative">
+        <div class="container-fluid max-w-container-max px-gutter">
+            <div class="border-start border-4 border-secondary ps-4 mb-5">
+                <h2 class="font-headline-lg text-white m-0">Featured Premium Cards</h2>
+                <p class="font-body-md text-on-surface-variant m-0 mt-2">Indian premium credit card listings and strategic details.</p>
+            </div>
+            
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5 mt-4">
+                <!-- Card 1: HDFC Infinia -->
+                <div class="col">
+                    <div class="glass-card rounded-xl p-4 d-flex flex-column h-100">
+                        <div class="position-relative w-100 mb-4 rounded-3 overflow-hidden border border-white-10" style="aspect-ratio: 1.58 / 1;">
+                            <img class="w-100 h-100 object-fit-cover" src="assets/Images/hdfc_infinia.png" alt="HDFC Infinia Metal Card" />
+                        </div>
+                        <h3 class="font-headline-md text-white mb-2 fs-4">HDFC Infinia Metal</h3>
+                        <div class="space-y-2 mb-4 flex-grow-1">
+                            <div class="d-flex justify-content-between font-label-caps text-on-surface-variant">
+                                <span>Annual Fee</span>
+                                <span class="text-secondary">₹12,500 + GST</span>
+                            </div>
+                            <div class="d-flex justify-content-between font-label-caps text-on-surface-variant">
+                                <span>Reward Rate</span>
+                                <span class="text-secondary">3.3% - 33.3%</span>
+                            </div>
+                            <p class="font-body-md text-on-surface-variant pt-3 fst-italic">"The pinnacle of lifestyle credit cards in India, offering metallic luxury, unlimited domestic & international lounge access, and standard 1:1 reward points conversion."</p>
+                        </div>
+                        <a href="#" class="btn btn-outline-secondary w-100 py-2 rounded-lg font-label-caps text-decoration-none text-center">Read Review</a>
+                    </div>
+                </div>
+                
+                <!-- Card 2: HDFC Regalia Gold -->
+                <div class="col">
+                    <div class="glass-card rounded-xl p-4 d-flex flex-column h-100">
+                        <div class="position-relative w-100 mb-4 rounded-3 overflow-hidden border border-white-10" style="aspect-ratio: 1.58 / 1;">
+                            <img class="w-100 h-100 object-fit-cover" src="assets/Images/hdfc_regalia.png" alt="HDFC Regalia Gold" />
+                        </div>
+                        <h3 class="font-headline-md text-white mb-2 fs-4">HDFC Regalia Gold</h3>
+                        <div class="space-y-2 mb-4 flex-grow-1">
+                            <div class="d-flex justify-content-between font-label-caps text-on-surface-variant">
+                                <span>Annual Fee</span>
+                                <span class="text-secondary">₹2,500 + GST</span>
+                            </div>
+                            <div class="d-flex justify-content-between font-label-caps text-on-surface-variant">
+                                <span>Reward Rate</span>
+                                <span class="text-secondary">1.3% - 6.6%</span>
+                            </div>
+                            <p class="font-body-md text-on-surface-variant pt-3 fst-italic">"Excellent travel companion offering complimentary Club Vistara Silver tier, international lounge access, and generous luxury voucher rewards on milestones."</p>
+                        </div>
+                        <a href="#" class="btn btn-outline-secondary w-100 py-2 rounded-lg font-label-caps text-decoration-none text-center">Read Review</a>
+                    </div>
+                </div>
+
+                <!-- 
+                [Card 3: Federal Bank Celesta]
+                <div class="col">
+                    <div class="glass-card rounded-xl p-4 d-flex flex-column h-100">
+                        <div class="position-relative w-100 mb-4 rounded-3 overflow-hidden border border-white-10" style="aspect-ratio: 1.58 / 1;">
+                            <img class="w-100 h-100 object-fit-cover" src="assets/Images/fed_celesta.png" alt="Federal Bank Celesta" />
+                        </div>
+                        <h3 class="font-headline-md text-white mb-2 fs-4">Federal Celesta</h3>
+                        <div class="space-y-2 mb-4 flex-grow-1">
+                            <div class="d-flex justify-content-between font-label-caps text-on-surface-variant">
+                                <span>Annual Fee</span>
+                                <span class="text-secondary">₹3,000 + GST</span>
+                            </div>
+                            <div class="d-flex justify-content-between font-label-caps text-on-surface-variant">
+                                <span>Reward Rate</span>
+                                <span class="text-secondary">Up to 3.0%</span>
+                            </div>
+                            <p class="font-body-md text-on-surface-variant pt-3 fst-italic">"Tailored for high-net-worth individuals, providing premium airport lounge visits, multi-category milestones, and fine dining privileges."</p>
+                        </div>
+                        <a href="#" class="btn btn-outline-secondary w-100 py-2 rounded-lg font-label-caps text-decoration-none text-center">Read Review</a>
+                    </div>
+                </div>
+
+                [Card 4: Federal Bank Imperio]
+                <div class="col">
+                    <div class="glass-card rounded-xl p-4 d-flex flex-column h-100">
+                        <div class="position-relative w-100 mb-4 rounded-3 overflow-hidden border border-white-10" style="aspect-ratio: 1.58 / 1;">
+                            <img class="w-100 h-100 object-fit-cover" src="assets/Images/fed_imperio.png" alt="Federal Bank Imperio" />
+                        </div>
+                        <h3 class="font-headline-md text-white mb-2 fs-4">Federal Imperio</h3>
+                        <div class="space-y-2 mb-4 flex-grow-1">
+                            <div class="d-flex justify-content-between font-label-caps text-on-surface-variant">
+                                <span>Annual Fee</span>
+                                <span class="text-secondary">₹1,500 + GST</span>
+                            </div>
+                            <div class="d-flex justify-content-between font-label-caps text-on-surface-variant">
+                                <span>Reward Rate</span>
+                                <span class="text-secondary">Up to 2.0%</span>
+                            </div>
+                            <p class="font-body-md text-on-surface-variant pt-3 fst-italic">"A versatile card offering dining discounts, complimentary golf training access, and strategic reward multipliers for retail and utility spending."</p>
+                        </div>
+                        <a href="#" class="btn btn-outline-secondary w-100 py-2 rounded-lg font-label-caps text-decoration-none text-center">Read Review</a>
+                    </div>
+                </div>
+
+                [Card 5: SBI Card ELITE]
+                <div class="col">
+                    <div class="glass-card rounded-xl p-4 d-flex flex-column h-100">
+                        <div class="position-relative w-100 mb-4 rounded-3 overflow-hidden border border-white-10" style="aspect-ratio: 1.58 / 1;">
+                            <img class="w-100 h-100 object-fit-cover" src="assets/Images/sbi_elite.png" alt="SBI Card ELITE" />
+                        </div>
+                        <h3 class="font-headline-md text-white mb-2 fs-4">SBI Card ELITE</h3>
+                        <div class="space-y-2 mb-4 flex-grow-1">
+                            <div class="d-flex justify-content-between font-label-caps text-on-surface-variant">
+                                <span>Annual Fee</span>
+                                <span class="text-secondary">₹4,999 + GST</span>
+                            </div>
+                            <div class="d-flex justify-content-between font-label-caps text-on-surface-variant">
+                                <span>Reward Rate</span>
+                                <span class="text-secondary">Up to 2.5%</span>
+                            </div>
+                            <p class="font-body-md text-on-surface-variant pt-3 fst-italic">"Packed with benefits, including ₹5,000 welcome e-Gift vouchers, complimentary movie tickets every month, and Trident Privilege Red Tier membership."</p>
+                        </div>
+                        <a href="#" class="btn btn-outline-secondary w-100 py-2 rounded-lg font-label-caps text-decoration-none text-center">Read Review</a>
+                    </div>
+                </div>
+
+                [Card 6: ICICI Emeralde]
+                <div class="col">
+                    <div class="glass-card rounded-xl p-4 d-flex flex-column h-100">
+                        <div class="position-relative w-100 mb-4 rounded-3 overflow-hidden border border-white-10" style="aspect-ratio: 1.58 / 1;">
+                            <img class="w-100 h-100 object-fit-cover" src="assets/Images/icici_emeralde.png" alt="ICICI Emeralde Metal Card" />
+                        </div>
+                        <h3 class="font-headline-md text-white mb-2 fs-4">ICICI Emeralde Metal</h3>
+                        <div class="space-y-2 mb-4 flex-grow-1">
+                            <div class="d-flex justify-content-between font-label-caps text-on-surface-variant">
+                                <span>Annual Fee</span>
+                                <span class="text-secondary">₹12,000 + GST</span>
+                            </div>
+                            <div class="d-flex justify-content-between font-label-caps text-on-surface-variant">
+                                <span>Reward Rate</span>
+                                <span class="text-secondary">Up to 3.0%</span>
+                            </div>
+                            <p class="font-body-md text-on-surface-variant pt-3 fst-italic">"A luxury metal card with low forex markup (1.5%), unlimited international lounge access, and unique perks like spa session vouchers."</p>
+                        </div>
+                        <a href="#" class="btn btn-outline-secondary w-100 py-2 rounded-lg font-label-caps text-decoration-none text-center">Read Review</a>
+                    </div>
+                </div>
+                -->
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="w-full py-section-gap border-top border-secondary-30 bg-surface-container-lowest">
+        <div class="container-fluid max-w-container-max px-gutter">
+            <div class="row g-5">
+                <div class="col-12 col-md-3">
+                    <span class="font-headline-md text-secondary">Credit Miles</span>
+                    <p class="text-on-surface-variant mt-4 font-body-md">Your gateway to the world of premium travel and
+                        elite financial rewards.</p>
+                </div>
+                <div class="col-12 col-md-3">
+                    <h4 class="font-label-caps text-white mb-4">Quick Links</h4>
+                    <ul class="list-unstyled d-flex flex-column gap-2 m-0 p-0">
+                        <li><a class="text-on-surface-variant hover-text-secondary text-decoration-none font-body-md" href="index.html#reviews">Latest Reviews</a></li>
+                        <li><a class="text-on-surface-variant hover-text-secondary text-decoration-none font-body-md" href="cards.html">Card Comparison</a></li>
+                        <li><a class="text-on-surface-variant hover-text-secondary text-decoration-none font-body-md" href="index.html#blog">Travel Guides</a></li>
+                        <li><a class="text-on-surface-variant hover-text-secondary text-decoration-none font-body-md" href="index.html#consultation">Consultation</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-3">
+                    <h4 class="font-label-caps text-white mb-4">Contact</h4>
+                    <ul class="list-unstyled d-flex flex-column gap-2 m-0 p-0">
+                        <li class="text-on-surface-variant font-body-md">
+                            <a href="mailto:abeed@gmail.com" class="text-on-surface-variant hover-text-secondary text-decoration-none">abeed@gmail.com</a>
+                        </li>
+                        <li class="text-on-surface-variant font-body-md">
+                            <a href="tel:+918893374583" class="text-on-surface-variant hover-text-secondary text-decoration-none">+91 88933 74583</a>
+                        </li>
+                        <li class="text-on-surface-variant font-body-md">Kerala, India</li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-3">
+                    <h4 class="font-label-caps text-white mb-4">Newsletter</h4>
+                    <div class="d-flex gap-2">
+                        <input class="form-control bg-input-dark border border-secondary-30 px-3 py-2 text-white text-sm" placeholder="Email address" type="email" style="border-radius: 8px;" />
+                        <button class="btn btn-secondary px-3 py-2 font-label-caps font-bold" style="font-size: 10px; border-radius: 8px;">Join</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-5 pt-4 border-top border-white-5 text-center">
+                <p class="text-on-surface-variant font-body-md text-sm opacity-60 m-0">© 2024 Credit Miles by Abeed Azad. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="position-fixed bottom-0 end-0 p-4 z-3 d-flex align-items-center group">
+        <div class="bg-secondary text-on-secondary px-3 py-2 rounded-lg font-label-caps me-3 opacity-0 group-hover-opacity transition-opacity whitespace-nowrap shadow border border-white-20">
+            Chat with us on WhatsApp
+        </div>
+        <a href="https://wa.me/918893374583" target="_blank" class="w-16 h-16 bg-whatsapp border-0 rounded-circle d-flex align-items-center justify-content-center text-white shadow hover-scale-110 transition-transform text-decoration-none" style="box-shadow: 0 0 20px rgba(37,211,102,0.4) !important;">
+            <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24" style="width: 32px; height: 32px;">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
+            </svg>
+        </a>
+    </div>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>
