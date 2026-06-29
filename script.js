@@ -50,13 +50,14 @@ void main() {
     
     // Add glowing particles
     float particles = 0.0;
-    for(float i = 0.0; i < 20.0; i++) {
+    for(int i = 0; i < 20; i++) {
+        float fi = float(i);
         vec2 pos = vec2(
-            fract(sin(i * 143.2) * 4567.8),
-            fract(cos(i * 98.1) * 1234.5 + u_time * 0.1)
+            fract(sin(fi * 143.2) * 4567.8),
+            fract(cos(fi * 98.1) * 1234.5 + u_time * 0.1)
         );
         float d = length(uv - pos);
-        particles += (0.001 / d) * (0.5 + 0.5 * sin(u_time * 2.0 + i));
+        particles += (0.001 / d) * (0.5 + 0.5 * sin(u_time * 2.0 + fi));
     }
     bg += gold * particles * 0.5;
 
