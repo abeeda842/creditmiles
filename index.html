@@ -11,6 +11,9 @@
 </head>
 <body class="font-body-md text-on-surface">
 
+    <div class="ambient"></div>
+    <div class="grain"></div>
+
     <!-- Top Navigation Bar -->
     <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-navbar-blur border-navbar shadow-lg py-0">
         <div class="container-fluid max-w-container-max px-gutter h-20 d-flex justify-content-between align-items-center">
@@ -66,17 +69,83 @@
                     </div>
                 </div>
                 
-                <div class="col-12 col-md-7 d-none d-md-block position-relative" style="height: 500px; perspective: 1000px;">
-                    <!-- Card Image Container -->
-                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
-                        <img src="assets/Images/card.png" 
-                             class="shadow-lg" 
-                             style="width: 100%; aspect-ratio: 1.58 / 1; transform: rotateZ(-10deg); transition: transform 0.1s ease; transform-style: preserve-3d; cursor: pointer;" 
-                             id="hero-card-image-container" 
-                             alt="Premium Credit Card" />
+                <div class="col-12 col-md-7 position-relative">
+                    <div class="stage">
+                        <!-- Card 1: Aurum (Gold Marble) -->
+                        <div class="card-premium" id="card-1">
+                            <div class="card-top-row">
+                                <div class="card-chip"></div>
+                                <svg viewBox="0 0 100 100" class="globe-logo" style="width:34px; height:34px; fill:none; stroke:#e9caa0; stroke-width:4;">
+                                    <circle cx="50" cy="50" r="30" />
+                                    <path d="M22 40 C 35 45, 65 45, 78 40" />
+                                    <path d="M22 60 C 35 55, 65 55, 78 60" />
+                                    <ellipse cx="50" cy="50" rx="10" ry="30" />
+                                    <ellipse cx="50" cy="50" rx="42" ry="12" transform="rotate(-25 50 50)" stroke-width="6" />
+                                </svg>
+                            </div>
+                            <div class="bottom-row">
+                                <div class="card-holder">Abeed Azad</div>
+                                <svg viewBox="0 0 100 60" style="width:36px; height:22px;">
+                                    <circle cx="30" cy="30" r="30" fill="url(#goldGradientH)" opacity="0.9" />
+                                    <circle cx="70" cy="30" r="30" fill="url(#goldGradientH)" opacity="0.9" style="mix-blend-mode: screen;" />
+                                    <defs>
+                                        <linearGradient id="goldGradientH" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="#e9caa0" />
+                                            <stop offset="100%" stop-color="#8a703f" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: Graphite (Silver Marble) -->
+                        <div class="card-premium" id="card-2">
+                            <div class="card-top-row">
+                                <div class="card-chip" style="background: linear-gradient(135deg, #ffffff, #8c8c8c, #444444);"></div>
+                                <svg viewBox="0 0 100 100" class="globe-logo" style="width:34px; height:34px; fill:none; stroke:#d9d9d9; stroke-width:4;">
+                                    <circle cx="50" cy="50" r="30" />
+                                    <path d="M22 40 C 35 45, 65 45, 78 40" />
+                                    <path d="M22 60 C 35 55, 65 55, 78 60" />
+                                    <ellipse cx="50" cy="50" rx="10" ry="30" />
+                                    <ellipse cx="50" cy="50" rx="42" ry="12" transform="rotate(-25 50 50)" stroke-width="6" />
+                                </svg>
+                            </div>
+                            <div class="bottom-row">
+                                <div class="card-holder" style="color:#ffffff;">Abeed Azad</div>
+                                <svg viewBox="0 0 100 60" style="width:36px; height:22px;">
+                                    <circle cx="30" cy="30" r="30" fill="url(#silverGradientH)" opacity="0.95" />
+                                    <circle cx="70" cy="30" r="30" fill="url(#silverGradientH)" opacity="0.95" style="mix-blend-mode: screen;" />
+                                    <defs>
+                                        <linearGradient id="silverGradientH" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="#ffffff" />
+                                            <stop offset="100%" stop-color="#8c8c8c" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: Onyx (Dark Gold Marble) -->
+                        <div class="card-premium" id="card-3">
+                            <div class="card-top-row">
+                                <div class="card-chip"></div>
+                                <svg viewBox="0 0 100 100" class="globe-logo" style="width:34px; height:34px; fill:none; stroke:#8a703f; stroke-width:4;">
+                                    <circle cx="50" cy="50" r="30" />
+                                    <path d="M22 40 C 35 45, 65 45, 78 40" />
+                                    <path d="M22 60 C 35 55, 65 55, 78 60" />
+                                    <ellipse cx="50" cy="50" rx="10" ry="30" />
+                                    <ellipse cx="50" cy="50" rx="42" ry="12" transform="rotate(-25 50 50)" stroke-width="6" />
+                                </svg>
+                            </div>
+                            <div class="bottom-row">
+                                <div class="card-holder">Abeed Azad</div>
+                                <svg viewBox="0 0 100 60" style="width:36px; height:22px;">
+                                    <circle cx="30" cy="30" r="30" fill="url(#goldGradientH)" opacity="0.9" />
+                                    <circle cx="70" cy="30" r="30" fill="url(#goldGradientH)" opacity="0.9" style="mix-blend-mode: screen;" />
+                                </svg>
+                            </div>
+                        </div>
                     </div>
-                    <div class="glow-particle position-absolute" style="top: 25%; right: 25%; width: 8px; height: 8px;"></div>
-                    <div class="glow-particle position-absolute opacity-20" style="bottom: 33%; left: 33%; width: 12px; height: 12px;"></div>
                 </div>
             </div>
         </div>
@@ -255,26 +324,28 @@
         <div class="container-fluid max-w-container-max px-gutter">
             <div class="row g-5">
                 <div class="col-12 col-lg-8">
-                    <div class="border-start border-4 border-secondary ps-4 mb-5">
-                        <h2 class="font-headline-lg text-white m-0">Featured Video</h2>
-                        <p class="font-body-md text-on-surface-variant m-0 mt-2">In-depth credit card strategies, reward breakdowns, and video reviews.</p>
-                    </div>
-                    
-                    <a href="https://youtu.be/OXUqZtsifu8?si=EgpvD1gKiXVWF5_v" target="_blank" class="d-block position-relative w-100 rounded-4 overflow-hidden border border-secondary-20 shadow-lg text-decoration-none" style="aspect-ratio: 16 / 9;">
-                        <img class="w-100 h-100 object-fit-cover"
-                            alt="These Fuel Cards Can Save You ₹10,000+ Every Year!"
-                            src="https://img.youtube.com/vi/OXUqZtsifu8/maxresdefault.jpg" />
-                        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center cursor-pointer group" style="background-color: rgba(0, 0, 0, 0.4) !important;">
-                            <div class="d-flex align-items-center justify-content-center rounded-circle group-hover-scale" style="width: 80px; height: 80px; background-color: var(--color-secondary); transition: transform 0.3s ease;">
-                                <span class="material-symbols-outlined text-on-secondary text-5xl" style="font-size: 48px;">play_arrow</span>
-                            </div>
+                    <div class="video-featured-container">
+                        <div class="border-start border-4 border-secondary ps-4 mb-4">
+                            <h2 class="font-headline-lg text-white m-0">Featured Video</h2>
+                            <p class="font-body-md text-on-surface-variant m-0 mt-2">In-depth credit card strategies, reward breakdowns, and video reviews.</p>
                         </div>
-                    </a>
-                    <div class="mt-4">
-                        <a href="https://youtu.be/OXUqZtsifu8?si=EgpvD1gKiXVWF5_v" target="_blank" class="text-decoration-none">
-                            <h3 class="font-headline-md text-white hover-text-secondary transition-colors">These Fuel Cards Can Save You ₹10,000+ Every Year!</h3>
+                        
+                        <a href="https://youtu.be/OXUqZtsifu8?si=EgpvD1gKiXVWF5_v" target="_blank" class="d-block position-relative w-100 rounded-4 overflow-hidden border border-secondary-20 shadow-lg text-decoration-none mb-4" style="aspect-ratio: 16 / 9;">
+                            <img class="w-100 h-100 object-fit-cover"
+                                alt="These Fuel Cards Can Save You ₹10,000+ Every Year!"
+                                src="https://img.youtube.com/vi/OXUqZtsifu8/maxresdefault.jpg" />
+                            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center cursor-pointer group" style="background-color: rgba(0, 0, 0, 0.4) !important;">
+                                <div class="d-flex align-items-center justify-content-center rounded-circle group-hover-scale" style="width: 80px; height: 80px; background-color: var(--color-secondary); transition: transform 0.3s ease;">
+                                    <span class="material-symbols-outlined text-on-secondary text-5xl" style="font-size: 48px;">play_arrow</span>
+                                </div>
+                            </div>
                         </a>
-                        <p class="text-on-surface-variant mt-2 font-body-md">Watch as I break down the best fuel credit cards in India. We analyze surcharge waivers, cashback rates, annual fees, and how to maximize your savings at the pump.</p>
+                        <div>
+                            <a href="https://youtu.be/OXUqZtsifu8?si=EgpvD1gKiXVWF5_v" target="_blank" class="text-decoration-none">
+                                <h3 class="font-headline-md text-white hover-text-secondary transition-colors">These Fuel Cards Can Save You ₹10,000+ Every Year!</h3>
+                            </a>
+                            <p class="text-on-surface-variant mt-2 font-body-md">Watch as I break down the best fuel credit cards in India. We analyze surcharge waivers, cashback rates, annual fees, and how to maximize your savings at the pump.</p>
+                        </div>
                     </div>
                 </div>
                 
@@ -288,7 +359,7 @@
                     
                     <div class="d-flex flex-column gap-3">
                         <!-- Active Video 1 -->
-                        <a href="https://youtu.be/DgOmeRD1QLQ?si=DX_T60KMpfqIebjP" target="_blank" class="d-flex gap-3 group cursor-pointer text-decoration-none">
+                        <a href="https://youtu.be/DgOmeRD1QLQ?si=DX_T60KMpfqIebjP" target="_blank" class="sidebar-video-item group cursor-pointer text-decoration-none">
                             <div class="rounded border border-white-10 overflow-hidden flex-shrink-0" style="width: 120px; aspect-ratio: 16 / 9;">
                                 <img class="w-100 h-100 object-fit-cover"
                                     alt="HDFC Regalia Gold Devaluation Video Thumbnail"
@@ -299,9 +370,9 @@
                                 <p class="text-xs text-on-surface-variant mt-2 m-0">2.8k views • 5 days ago</p>
                             </div>
                         </a>
-
+ 
                         <!-- Active Video 2 -->
-                        <a href="https://youtu.be/VRBXNkQxqF0?si=-PvUpod-FyQyO6-J" target="_blank" class="d-flex gap-3 group cursor-pointer text-decoration-none">
+                        <a href="https://youtu.be/VRBXNkQxqF0?si=-PvUpod-FyQyO6-J" target="_blank" class="sidebar-video-item group cursor-pointer text-decoration-none">
                             <div class="rounded border border-white-10 overflow-hidden flex-shrink-0" style="width: 120px; aspect-ratio: 16 / 9;">
                                 <img class="w-100 h-100 object-fit-cover"
                                     alt="Paytm Bank Cancelled Video Thumbnail"
@@ -312,9 +383,9 @@
                                 <p class="text-xs text-on-surface-variant mt-2 m-0">4.5k views • 1 week ago</p>
                             </div>
                         </a>
-
+ 
                         <!-- Active Video 3 -->
-                        <a href="https://youtu.be/VLTOd6omB2w?si=cM1XlNMb2e-K8Mvb" target="_blank" class="d-flex gap-3 group cursor-pointer text-decoration-none">
+                        <a href="https://youtu.be/VLTOd6omB2w?si=cM1XlNMb2e-K8Mvb" target="_blank" class="sidebar-video-item group cursor-pointer text-decoration-none">
                             <div class="rounded border border-white-10 overflow-hidden flex-shrink-0" style="width: 120px; aspect-ratio: 16 / 9;">
                                 <img class="w-100 h-100 object-fit-cover"
                                     alt="Credit Cards Explained for Beginners Video Thumbnail"
@@ -335,7 +406,7 @@
     <section id="about-me" class="py-section-gap position-relative overflow-hidden">
         <div class="glow-particle position-absolute opacity-5" style="width: 256px; height: 256px; top: -128px; left: -128px; filter: blur(120px);"></div>
         <div class="container-fluid max-w-container-max px-gutter text-center position-relative z-1">
-            <div class="w-48 h-48 mx-auto rounded-circle p-1 mb-5" style="background: linear-gradient(135deg, var(--color-secondary), transparent);">
+            <div class="w-48 h-48 mx-auto rounded-circle p-1 mb-5 about-me-avatar">
                 <div class="w-100 h-100 rounded-circle overflow-hidden border border-4 border-background">
                     <img class="w-100 h-100 object-fit-cover"
                         data-alt="A professional portrait of Abeed Azad, a financial expert and credit card strategist. He is dressed in a sharp, modern charcoal suit, looking confident and approachable. The background is a blurred, high-end contemporary office space with warm, directional lighting that creates a professional and trustworthy vibe. The aesthetic is clean and premium."
@@ -424,6 +495,9 @@
 
     <!-- Bootstrap Bundle JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <!-- Custom Script -->
     <script src="script.js"></script>
 </body>

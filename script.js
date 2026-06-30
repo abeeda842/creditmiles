@@ -112,23 +112,62 @@ void main() {
     }
 
     // ==========================================
-    // 2. Hero Credit Card Hover Tilt Animation
+    // 2. 3D Stacked Cards Deck Animations (GSAP)
     // ==========================================
-    const heroCard = document.getElementById('hero-card-image-container');
-    if (heroCard) {
-        const parent = heroCard.parentElement;
-        parent.addEventListener('mousemove', (e) => {
-            const rect = parent.getBoundingClientRect();
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Card initial stack position setup (relative to center alignment)
+    const heroCards = [
+      {id:'#card-1', x:0, y:-30, rot:-8, scale:1},
+      {id:'#card-2', x:40, y:30, rot:6, scale:0.94},
+      {id:'#card-3', x:-50, y:60, rot:-16, scale:0.88}
+    ];
+
+    heroCards.forEach((c,i)=>{
+      // Center cards using xPercent/yPercent and then translate and rotate them slightly
+      gsap.set(c.id, {xPercent:-50, yPercent:-50, x:c.x, y:c.y+40, rotateZ:c.rot, rotateY:14, scale:c.scale, opacity:0});
+      gsap.to(c.id, {y:c.y, opacity:1, duration:1.1, delay:0.15*i, ease:'power3.out'});
+      
+      // Floating ambient bobbing effect
+      if(!reduce){
+        gsap.to(c.id, {
+          y: c.y - 14, rotateZ: c.rot + (i%2===0?2:-2),
+          duration: 3 + i, ease:'sine.inOut', repeat:-1, yoyo:true, delay:i*0.3
+        });
+      }
+    });
+
+    // Scroll parallax dispersion timeline
+    if(!reduce){
+      gsap.timeline({scrollTrigger:{trigger:'.hero', start:'top top', end:'bottom top', scrub:1}})
+        .to('#card-1', {rotateY:-30, x:-30, rotateZ:-18}, 0)
+        .to('#card-2', {rotateY:40, x:90, rotateZ:14}, 0)
+        .to('#card-3', {rotateY:-50, x:-110, rotateZ:-28}, 0);
+    }
+
+    // Deck-wide interactive mousemove tilt reaction
+    const stage = document.querySelector('.stage');
+    if (stage && !reduce) {
+        stage.addEventListener('mousemove', (e) => {
+            const rect = stage.getBoundingClientRect();
             const x = e.clientX - rect.left - rect.width / 2;
             const y = e.clientY - rect.top - rect.height / 2;
-            const tiltX = (y / (rect.height / 2)) * -15; 
-            const tiltY = (x / (rect.width / 2)) * 15;
-            
-            heroCard.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale(1.05) rotateZ(-10deg)`;
+            const tiltX = (y / (rect.height / 2)) * -8; 
+            const tiltY = (x / (rect.width / 2)) * 8;
+            gsap.to('.card-premium', {
+                rotateX: tiltX,
+                rotateY: 14 + tiltY,
+                overwrite: 'auto',
+                duration: 0.5
+            });
         });
-        
-        parent.addEventListener('mouseleave', () => {
-            heroCard.style.transform = 'rotateX(0deg) rotateY(0deg) scale(1) rotateZ(-10deg)';
+        stage.addEventListener('mouseleave', () => {
+            gsap.to('.card-premium', {
+                rotateX: 0,
+                rotateY: 14,
+                overwrite: 'auto',
+                duration: 0.8
+            });
         });
     }
 
@@ -189,6 +228,19 @@ void main() {
                 nav.style.transform = 'translateY(0)';
             }
             lastScroll = currentScroll;
+        });
+    }
+
+    // Close Bootstrap collapsed navbar menu automatically on mobile when a link is clicked
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    const toggler = document.querySelector('.navbar-toggler');
+    if (navLinks && toggler) {
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth < 768 && !toggler.classList.contains('collapsed')) {
+                    toggler.click();
+                }
+            });
         });
     }
 });
